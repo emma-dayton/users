@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Edit User</h1>
+</div>
+<form action="/users/{{user.id}}/update" method="post">
+  <div class="form-group">
+    <label for="fname">First Name</label>
+    <input type="text" class="form-control" id="fname" name="fname"
+        value='{{ user.first_name }}'>
+  </div>
+  <div class="form-group">
+    <label for="lname">Last Name</label>
+    <input type="text" class="form-control" id="lname" name="lname"
+        value='{{ user.last_name }}'>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email Address</label>
+    <input type="email" class="form-control" id="email" name="email"
+        aria-describedby="emailHelp" value='{{ user.email }}'
+    <small id="emailHelp" class="form-text text-muted">
+      We'll share your email with anyone who asks. And many who don't.
+    </small>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<a href='/users'>Aw, nevermind.</a>
+{% endblock %}

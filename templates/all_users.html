@@ -5,7 +5,7 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">ID</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">Account Created</th>
@@ -19,12 +19,13 @@
       <td> {{ user.first_name }} {{ user.last_name }} </td>
       <td> {{ user.email }} </td>
       <td> {{ user.created_at }}</td>
-      <td> <a href='/users/{{user.id}}/show'>show</a> |
+      <td> <a href='/users/{{user.id}}'>show</a> |
         <a href='/users/{{user.id}}/edit'>update</a> |
-        <a href='/users/{{user.id}}/delete'>delete</a> </td>
+        <a href='/users/{{user.id}}/destroy'>delete</a>
+
     </tr>
     {% endfor %}
   </tbody>
-  <a href='users/add'>Add a New User</a>
 </table>
+<a class="btn btn-outline-dark my-2 my-sm-0" href='users/new'>Add a New User</a>
 {% endblock %}
