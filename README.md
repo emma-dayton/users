@@ -4,4 +4,5 @@ Skills used:
 * Python
 * Flask
 * HTML
+* Template Inheritance
 * Bootstrap styling

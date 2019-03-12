@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>All Users</h1>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Account Created</th>
+      <th scope="col">Last Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+    <tr>
+      <th scope="row"> {{ user.id }} </th>
+      <td> {{ user.first_name }} {{ user.last_name }} </td>
+      <td> {{ user.email }} </td>
+      <td> {{ user.created_at }}</td>
+      <td> {{ user.updated_at }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
